@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="../css/HomePage.css" rel="stylesheet" />
+    <link href="../css/Style.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <div class="newdeli-a">
+        <div class="newdeli">
+            <h4>ניו דלי</h4>
+            <p dir="rtl">
+                לחם הנאפה במקום לעיני הלקוח,
+                ירקות טריים ,רטבים יחודיים, בשר Deli מעושן<br />
+                מחלקים מובחרים הנצלה באופן ייחודי על הגריל,<br />
+                וכריכי גריל נוספים ומשובחים היוצרים סנדוויץ' שהוא...<br />
+                סנדוויץ' סנדוויץ'!!!!!!<br />
+
+            </p>
+            <button class="btn"><a class="a-home" href="../pages/About us.html">קראו עוד</a></button>
+        </div>
+    </div>
+    <div class="visit-a">
+        <div class="visit">
+            <h4>קפצו לבקר</h4>
+            <p dir="rtl">
+                לאחר שנפתח הסניף הראשון בינואר 2004<br />
+                ברח' הלל שבמרכז העיר ירושלים, מקומות נוספים<br />
+                היו רק ענין של זמן לאור הביקוש הרב,<br />
+                ואכן כך קרה...<br />
+
+            </p>
+            <button class="btn"><a class="a-home" href="../pages/Branches.html">רשימת סניפים</a></button>
+        </div>
+    </div>
+    <div class="worker-a">
+        <div class="worker">
+            <h4>בואו לעבוד איתנו</h4>
+            <p dir="rtl">
+                רשת ניו-דלי הינה רשת מזון מהיר איכותי מתפתחת,<br/>
+                המקפידה על גיוס עובדים תמידי. אתם מוזמנים לקחת<br/>
+                חלק בהצלחה, לעבוד בסביבה דינמית, מאתגרת ובאוויר<br/>
+                נעימה בה תוכלו לרכוש כישורים מקצועיים וידע מגוון.
+
+            </p>
+            <button class="btn"><a class="a-home" href="#footer" onclick="change()">דרושים</a></button>
+        </div>
+    </div>
+    <div class="popup"><!--פופ-אפ-->
+        <button class="close" onclick="close1()">X</button>
+        <h2 class="title2">קבלו קישור להטבה!</h2>
+        <form onsubmit="close1()" >
+            <div class="title3">
+                <input type="tel" class="tel" name="phone" placeholder="הנייד שלך" required pattern="[0-9]{10}"/>
+                <button class="p-btn" onclick="close2()">שליחה</button>
+            </div>   
+        </form>
+    </div>
+    <div class="bg"></div>
+        <footer id="footer">
+        <div class="areas">
+            <div class="contact">
+                <form action="">
+                    <h1 class="c-title">צור קשר</h1>
+                    <input type="text" class="c-inp" id="c-fullname" placeholder="שם מלא" required/>
+                    <input type="text" class="c-inp" id="c-tel" placeholder="טלפון" required/>
+                    <input type="text" class="c-inp" id="c-mail" placeholder="מייל" required/>
+                    <select name="c-sub" class="c-inp" id="c-sub">
+                        <option value="customer-service">שירות לקוחות</option>
+                        <option value="work">דרושים</option>
+                        <option value="franchise">זכיינות</option>
+                        <option value="other">אחר</option>
+                    </select>
+                    <textarea name="request" id="request" cols="30" rows="4" placeholder="הכנס תוכן פניה"></textarea>
+                    <input type="submit" class="f-btn" value="שליחה" onclick="p2()">
+                </form>
+            </div>
+            <div class="bottom-footer-text">
+                <h2 class="f-title">© new deli</h2>
+            </div>
+        </div>
+    </footer>
+<script>//תקינות פופ אפ וכו
+            let pop = document.querySelector(".popup");
+        let bg = document.querySelector(".bg");
+        const myTimeout = setTimeout(func, 3000);
+
+        function func() {
+            bg.style.visibility = "visible";
+
+            pop.style.visibility = "visible";
+
+        }
+        function close1() {
+            let pop = document.querySelector(".popup");
+            let bg = document.querySelector(".bg");
+            bg.style.visibility = "hidden";
+            pop.style.visibility = "hidden";
+        }
+        function close2() {
+            let pop = document.querySelector(".popup");
+            let bg = document.querySelector(".bg");
+            let tel = document.querySelector(".tel");
+            if(tel.value==""){
+                alert("הכנס מספר טלפון")
+            }
+            else{
+                bg.style.visibility = "hidden";
+                pop.style.visibility = "hidden";
+            }
+
+        }
+        function change(){
+            let select = document.querySelector("#c-sub");
+            select.selectedIndex=1;
+        }
+        function p2(){
+            event.preventDefault();
+            close1();
+            alert("dccxxc");
+        }
+</script>
+</body>
+</html>

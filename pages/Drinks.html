@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../css/Style.css" rel="stylesheet" />
+    <link href="../css/Drinks.css" rel="stylesheet" />
+</head>
+<body>
+    <h1> משקאות</h1>
+    <h2 class="price">* 7 ש"ח לכל הסוגים</h2>
+    <div class="drinks">
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/מים מינרלים.png" alt="mineral water" />
+                <h3>מים מינרלים</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/סודה.png" alt="soda" />
+                <h3>סודה</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/ענבים.png" alt="grapes" />
+                <h3>ענבים</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/פיוז תי אפרסק.png" alt="Fuse Tea Peach" />
+                <h3>פיוז תי אפרסק</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/פרוט ווטר אבטיח.png" alt="Fruit Water Watermelon" />
+                <h3>פרוט ווטר אבטיח</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/קוקה קולה.png" alt="Coca Cola" />
+                <h3>קוקה קולה</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/קוקה קולה זירו.png" alt="Coca Cola Zero" />
+                <h3>קוקה קולה זירו</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/פחית ענבים.png" alt="A can of grapes" />
+                <h3>פחית ענבים</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/שוופס לימונייד.png" alt="Shwoeps lemonade" />
+                <h3>שוופס לימונייד</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/שוופס תפוחים.png" alt="Apple Shwoeps" />
+                <h3>שוופס תפוחים</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/תפוזים.png" alt="orange" />
+                <h3>תפוזים</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/ספרינג פירות טרופיים.png" alt="tropical fruits" />
+                <h3>פירות טרופיים</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/ספרינג תות בננה.png" alt="Strawberry banana" />
+                <h3>נקטר תות בננה</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/ספרינג תפוחים.png" alt="Apple spring" />
+                <h3>נקטר תפוחים</h3>
+            </div>
+        </a>
+        <a class="btn_dr" onclick="func2()">
+            <div class="drinks_a">
+                <img src="../files/images/drinks/ספרינג מנגו.png" alt="Mango Spring" />
+                <h3>נקטר מנגו</h3>
+            </div>
+        </a>
+
+    </div>
+    <div class="bg"></div>
+    <div class="finish"><!--פופ-אפ סיום הזמנה שנפתח בבחירת מוצר-->
+        <button class="close2" onclick="close2()">X</button>
+        <h2 class="title2">
+            האם ברצונך לסיים
+            <br />את ההזמנה?
+        </h2>
+
+        <a class="no2" href="Payment.html">סיום הזמנה</a>
+        <a class="yes2" href="Choose.html">הוסף מוצר</a>
+    </div>
+    <footer>
+        <div class="areas">
+            <div class="contact">
+                <form action="">
+                    <h1 class="c-title">צור קשר</h1>
+                    <input type="text" class="c-inp" id="c-fullname" placeholder="שם מלא" required />
+                    <input type="text" class="c-inp" id="c-tel" placeholder="טלפון" required />
+                    <input type="text" class="c-inp" id="c-mail" placeholder="מייל" required />
+                    <select name="c-sub" class="c-inp" id="c-sub">
+                        <option value="customer-service">שירות לקוחות</option>
+                        <option value="work">דרושים</option>
+                        <option value="franchise">זכיינות</option>
+                        <option value="other">אחר</option>
+                    </select>
+                    <textarea name="request" id="request" cols="30" rows="4" placeholder="הכנס תוכן פניה"></textarea>
+                    <input type="submit" class="f-btn" value="שליחה">
+                </form>
+            </div>
+            <div class="bottom-footer-text">
+                <h2 class="f-title">© new deli</h2>
+            </div>
+        </div>
+    </footer>
+    <script>//פעולות של הפופ-אפ סיום הזמנה
+        function func2() {
+            let pop2 = document.querySelector(".finish");
+            let bg = document.querySelector(".bg");
+            let pop = document.querySelector(".popup");
+            bg.style.visibility = "visible";
+            pop2.style.visibility = "visible";
+            pop.style.visibility = "hidden";
+
+        }
+        function close2() {
+            let pop = document.querySelector(".finish");
+            let bg = document.querySelector(".bg");
+            bg.style.visibility = "hidden";
+            pop.style.visibility = "hidden";
+        }
+    </script>
+</body>
+</html>

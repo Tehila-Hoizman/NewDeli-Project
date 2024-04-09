@@ -1,0 +1,27 @@
+body {
+    background-image: url(../files/images/slider-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    direction: rtl;
+}
+.thank {
+    background: white;
+    width: 27%;
+    text-align: center;
+    border-radius: 191px;
+    padding: 3% 0px;
+    border: 3px dotted green;
+}
+.all {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5vw;
+}
+a.a-home {
+    text-decoration: none;
+    color: black;
+    position:absolute;
+    right:43vw;
+    margin:3%;
+}

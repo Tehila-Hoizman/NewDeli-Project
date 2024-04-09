@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../css/Style.css" rel="stylesheet" />
+    <link href="../css/TakeAway.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="options">
+        <h1>פרטי משלוח</h1>
+        <form action="Choose.html" class="details" target="iframe_a" autocomplete="off">
+            <input type="text" name="name_cust"  placeholder="שם מלא" class="inp" id="name1" autocomplete="off"  />
+            <input type="tel" name="tel"  placeholder="טלפון" class="inp" id="phone" autocomplete="off" />
+            <select id="Branch" class="selectpicker" name="Branch" required>
+                <option hidden selected id="title-select">בחר סניף</option>
+                <option value="קניון עזריאלי תל אביב">קניון עזריאלי תל אביב</option>
+                <option value="קינג ג'ורג תל אביב">קינג ג'ורג תל אביב</option>
+                <option value="מודיעין סנטר">מודיעין סנטר</option>
+                <option value="קניון עזריאלי רמלה">קניון עזריאלי רמלה</option>
+                <option value="המושבה הגרמנית ירושלים">המושבה הגרמנית ירושלים</option>
+                <option value="הלל ירושלים">הלל ירושלים</option>
+                <option value="יפו ירושלים">יפו ירושלים</option>
+                <option value="מדרחוב בן יהודה ירושלים">מדרחוב בן יהודה ירושלים</option>
+                <option value="קניון הקריון, קריות">קניון הקריון, קריות</option>
+                <option value="קניון עזריאלי חיפה">קניון עזריאלי חיפה</option>
+                <option value="חיפה – לב המפרץ">חיפה – לב המפרץ</option>
+                <option value="סנטר הגליל, ראש פינה">סנטר הגליל, ראש פינה</option>
+                <option value="קניון הסיטי, אשדוד">קניון הסיטי, אשדוד</option>
+                <option value="באר שבע תחנה מרכזית">באר שבע תחנה מרכזית</option>
+
+            </select>
+            <input type="submit" class="btn-con" class="inp" value="המשך" onclick="check()"/>
+
+        </form>
+    </div>
+    <footer>
+        <div class="areas">
+            <div class="contact">
+                <form action="">
+                    <h1 class="c-title">צור קשר</h1>
+                    <input type="text" class="c-inp" id="c-fullname" placeholder="שם מלא" required/>
+                    <input type="text" class="c-inp" id="c-tel" placeholder="טלפון" required/>
+                    <input type="text" class="c-inp" id="c-mail" placeholder="מייל" required/>
+                    <select name="c-sub" class="c-inp" id="c-sub">
+                        <option value="customer-service">שירות לקוחות</option>
+                        <option value="work">דרושים</option>
+                        <option value="franchise">זכיינות</option>
+                        <option value="other">אחר</option>
+                    </select>
+                    <textarea name="request" id="request" cols="30" rows="4" placeholder="הכנס תוכן פניה"></textarea>
+                    <input type="submit" class="f-btn" value="שליחה">
+                </form>
+            </div>
+            <div class="bottom-footer-text">
+                <h2 class="f-title">© new deli</h2>
+            </div>
+        </div>
+    </footer>
+    <script>//בדיקת מילוי כל הטופס
+        function check() {
+            if ( document.getElementById("name1").value.length === 0) {
+                event.preventDefault();
+                alert("הכנס שם");
+            } else if (document.getElementById("phone").value == "") {
+                event.preventDefault();
+                alert("הכנס טלפון");
+            } else if (document.getElementById("title-select").selected == true ) {
+                event.preventDefault();
+                alert("בחר סניף");
+            }
+
+        }
+    </script>
+</body>
+</html>

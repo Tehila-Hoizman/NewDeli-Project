@@ -1,0 +1,50 @@
+﻿.options {
+    display:grid;
+    grid-template-columns:1fr repeat(3,2fr) 1fr;
+    grid-template-rows:1fr 2fr 1fr;
+    width:100%;
+    margin:unset;
+    height:100vh;
+}
+body{
+    background-image:url(../files/images/slider-bg.jpg);
+    background-size:cover;
+}
+.sit-a{
+    grid-area:2/2;
+}
+.take-away-a{
+    grid-area:2/3;
+}
+.shipping-a{
+    grid-area:2/4;
+}
+.options div { /* class options שב divכל ה*/
+    margin: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 24px;
+    color: white;
+    box-shadow: 9px 10px 30px #f5b72a8a;
+    height: 100%;
+}
+
+.options a img { /* options שבתוך a שבתוך img*/
+    display: block;
+    width: 40%;
+}
+.options h2 {
+    font-size: 30px;
+    font-family: sans-serif;
+    color: black;
+}
+.options a{
+    text-decoration:none;
+}
+.shipping h3 {
+    text-align: left;
+    font-weight: 100;
+    font-size: 14px;
+}

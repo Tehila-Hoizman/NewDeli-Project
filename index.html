@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>New Deli</title>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/Style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="files/images/favicon.png">
+
+</head>
+<body>
+
+    <header>
+        <ul class="ul_menu"><!--תפריט-->
+            <li class="li_menu"><a class="a_menu" href="">דף הבית</a></li>
+            <li class="li_menu"><a class="a_menu" href="pages/About us.html" target="iframe_a">אודות</a></li>
+            <li class="li_menu"><a class="a_menu" href="pages/Orders.html" target="iframe_a">הזמנות</a></li>
+            <li class="li_menu"><a class="a_menu" href="pages/Branches.html" target="iframe_a">סניפים</a></li>
+        </ul>
+        <div class="div_logo_menu">
+            <a href="pages/HomePage.html" target="iframe_a">
+                <img class="img_logo_menu" alt="logo-new-deli" src="files/images/NewDeli_Logo.png" />
+            </a>
+        </div>
+    </header>
+
+    <main> <!--תוכן-->
+
+        <button class="open-button" onclick="openForm()"><img class="icon-what" src="files/images/chat.png" /></button>
+
+        <div class="chat-popup" id="myForm" onmouseleave="closeForm()"><!--צאט-->
+            <form action="" class="form-container">
+                <h1><img class="logo-chat" src="files/images/2-NewDeli_Logo.png" /></h1>
+                <h2 class="title-chat">שלום! כאן צוות ניו דלי, איך נוכל לעזור?</h2>
+                <textarea name="msg" placeholder="כתוב משהו..." required id="msg"></textarea>
+
+                <button type="button" class="btn"><img src="files/images/send-message.png" /></button>
+            </form>
+        </div>
+
+        <iframe src="pages/HomePage.html" name="iframe_a" title="Main Iframe"></iframe>
+    </main>
+
+    <!--<footer>
+    </footer>-->
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    document.getElementById("msg").innerHTML = "";
+
+}
+</script>
+</body>
+</html>

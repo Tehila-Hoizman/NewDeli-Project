@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../css/Style.css" rel="stylesheet" />
+    <link href="../css/MenuSandwiches.css" rel="stylesheet" />
+    <link href="../css/Snacking.css" rel="stylesheet" />
+</head>
+<body id="b">
+    <h1>מה תרצו לנשנש?</h1>
+    <h2 class="price">* תוספת נשנוש 15 ש"ח</h2>
+    <div class="sandwichs">
+        <div class="sandw" onclick="choose(this)">
+            <img onclick="choose()" src="../files/images/snacking/ציפס.png" alt="chips" />
+            <h3 onclick="choose()">ציפס</h3>
+            <input type="checkbox" value="chips" />
+            <div class="v">
+                <img src="../files/images/V.png" alt="v">
+            </div>
+        </div>
+        <div class="sandw" onclick="choose(this)">
+            <img onclick="choose()" src="../files/images/Snacking/טבעות-בצל.png" alt="Onion rings" />
+            <h3 onclick="choose()"> טבעות בצל</h3>
+            <input type="checkbox" value="onion-rings" />
+            <div class="v">
+                <img src="../files/images/V.png" alt="v">
+            </div>
+        </div>
+        <div class="sandw" onclick="choose(this)">
+            <img onclick="choose()" src="../files/images/snacking/ציפס-בטטה.png" alt="Sweet potato chips" />
+            <h3 onclick="choose()"> ציפס בטטה</h3>
+            <input type="checkbox" value="potatoChips" />
+            <div class="v">
+                <img src="../files/images/V.png" alt="v">
+            </div>
+        </div>
+        <div class="sandw" onclick="choose(this)">
+            <img onclick="choose()" src="../files/images/snacking/שניצלונים.png" alt="schnitzels" class="image" />
+            <h3 onclick="choose()">שניצלונים</h3>
+            <input type="checkbox" value="schnitzels" />
+            <div class="v">
+                <img src="../files/images/V.png" alt="v">
+            </div>
+        </div>
+        <div class="sandw" onclick="choose(this)">
+            <img onclick="choose()" src="../files/images/snacking/כנפיים.png" alt="wings" class="image" />
+            <h3 onclick="choose()">כנפיים</h3>
+            <input type="checkbox" value="wings" />
+
+            <div class="v">
+                <img src="../files/images/V.png" alt="v">
+            </div>
+        </div>
+
+    </div>
+    <div class="continue">
+        <a onclick="func()">המשך</a>
+    </div>
+    <div class="popup"><!--פופ-אפ שנפתח עם לחיצה על המשך-->
+        <button class="close" onclick="close1()">X</button>
+        <h2 class="title">משהו <br /> לשתות?</h2>
+        <a class="no" onclick="func2()">לא, תודה!</a>
+        <a class="yes" href="Drinks.html">אני רוצה</a>
+    </div>
+    <div class="bg"></div>
+    <div class="finish">
+        <button class="close2" onclick="close2()">X</button>
+
+        <h2 class="title2">
+            האם ברצונך לסיים
+            <br />את ההזמנה?
+        </h2>
+
+        <a class="no2" href="Payment.html">סיום הזמנה</a>
+        <a class="yes2" href="Choose.html">הוסף מוצר</a>
+    </div>
+    <footer>
+        <div class="areas">
+            <div class="contact">
+                <form action="">
+                    <h1 class="c-title">צור קשר</h1>
+                    <input type="text" class="c-inp" id="c-fullname" placeholder="שם מלא" required />
+                    <input type="text" class="c-inp" id="c-tel" placeholder="טלפון" required />
+                    <input type="text" class="c-inp" id="c-mail" placeholder="מייל" required />
+                    <select name="c-sub" class="c-inp" id="c-sub">
+                        <option value="customer-service">שירות לקוחות</option>
+                        <option value="work">דרושים</option>
+                        <option value="franchise">זכיינות</option>
+                        <option value="other">אחר</option>
+                    </select>
+                    <textarea name="request" id="request" cols="30" rows="4" placeholder="הכנס תוכן פניה"></textarea>
+                    <input type="submit" class="f-btn" value="שליחה">
+                </form>
+            </div>
+            <div class="bottom-footer-text">
+                <h2 class="f-title">© new deli</h2>
+            </div>
+        </div>
+    </footer>
+    <script>//פעולות הפופ-אפ וסימון V בבחירת מוצר
+        let pop = document.querySelector(".popup");
+        let bg = document.querySelector(".bg");
+
+        function func() {
+            bg.style.visibility = "visible";
+
+            pop.style.visibility = "visible";
+
+        }
+        function close1() {
+            let pop = document.querySelector(".popup");
+            let bg = document.querySelector(".bg");
+            bg.style.visibility = "hidden";
+            pop.style.visibility = "hidden";
+        }
+        function func2() {
+            let pop2 = document.querySelector(".finish");
+            let bg = document.querySelector(".bg");
+            let pop = document.querySelector(".popup");
+            bg.style.visibility = "visible";
+            pop2.style.visibility = "visible";
+            pop.style.visibility = "hidden";
+
+        }
+        function close2() {
+            let pop = document.querySelector(".finish");
+            let bg = document.querySelector(".bg");
+            bg.style.visibility = "hidden";
+            pop.style.visibility = "hidden";
+        }
+        function choose(e) {
+            if (e.style.border === "1px solid rgb(51, 204, 51)") {
+                e.style.border = "0px solid rgb(51, 204, 51)"
+                e.children[3].style.visibility = "hidden"
+                e.children[2].checked = false;
+            }
+            else {
+                e.style.border = "1px solid rgb(51, 204, 51)"
+                e.children[3].style.visibility = "visible"
+                e.children[2].checked = true;
+
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿
+    .pay {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        height: 38vw;
+        padding: 3%;
+    }
+    main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    body {
+        background-image: url(../files/images/slider-bg.jpg);
+        background-position: center center;
+        background-size: cover;
+        direction: rtl;
+    }
+    .pay-inp,.pay-btn {
+        width: 50%;
+        height: 3vw;
+        background-color: #f7d14a00;
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 0.5%;
+    }
+    .date {
+        width: 50%;
+        height: 3vw;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .pay-select {
+        width: 49%;
+    }
+    input.pay-btn {
+        background: #03af1140;
+    }

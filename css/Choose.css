@@ -1,0 +1,61 @@
+﻿body {
+    background-image: none;
+    background-color: #ffd800;
+}
+
+.breads {
+    background-image: url('../files/images/sliders/מבחר כריכים~1.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid white;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr repeat(2,2fr) 1fr;
+    grid-template-rows: 1fr 2fr 0.5fr 1fr;
+    width: 100%;
+    margin: unset;
+    height: 100vh;
+}
+
+    .options div { /* class options שב divכל ה*/
+        margin: 6%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        box-shadow: 9px 10px 30px #f5b72a8a;
+        height: 100%;
+    }
+
+.saleds {
+    background-image: url('../files/images/sliders/סלט עלים ועוף~1.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid white;
+}
+
+.breads-a {
+    grid-area: 2/2;
+}
+
+.saleds-a {
+    grid-area: 2/3;
+}
+
+.options h2 { /* class options שב h2כל ה*/
+    font-size: 30px;
+    color: black;
+    grid-row: 3;
+    text-align: center;
+}
+
+.options a { /* class options שב aכל ה*/
+    text-decoration: none;
+}

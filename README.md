@@ -22,3 +22,4 @@ To deploy NewDeli HTML Project locally, follow these steps:
    ```
    Clone git https://github.com/tehila0601/NewDeli-HtmlProject.git
    ```
+2. Open the index.html file in your web browser
